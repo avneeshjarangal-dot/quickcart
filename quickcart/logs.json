@@ -1,0 +1,536 @@
+[
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:12:33.421Z"
+        },
+        "level": "ERROR",
+        "service": "order-service",
+        "message": "'NoneType' object is not subscriptable",
+        "file": "/app/quickcart/services/order_service/controllers/orderController.py",
+        "function": "create_order",
+        "line": 34,
+        "logger": "order-service",
+        "traceback": "Traceback (most recent call last):\n  File \"/app/quickcart/services/order_service/controllers/orderController.py\", line 34, in create_order\n    delivery_pincode = user[\"address\"][\"pincode\"]\nTypeError: 'NoneType' object is not subscriptable",
+        "extra": {
+            "user_id": "63f1a2b3c4d5e6f7a8b9c0d1",
+            "order_id": null
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:12:51.104Z"
+        },
+        "level": "ERROR",
+        "service": "order-service",
+        "message": "'NoneType' object is not subscriptable",
+        "file": "/app/quickcart/services/order_service/controllers/orderController.py",
+        "function": "create_order",
+        "line": 34,
+        "logger": "order-service",
+        "traceback": "Traceback (most recent call last):\n  File \"/app/quickcart/services/order_service/controllers/orderController.py\", line 34, in create_order\n    delivery_pincode = user[\"address\"][\"pincode\"]\nTypeError: 'NoneType' object is not subscriptable",
+        "extra": {
+            "user_id": "63f1a2b3c4d5e6f7a8b9c0d2",
+            "order_id": null
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:15:09.877Z"
+        },
+        "level": "ERROR",
+        "service": "order-service",
+        "message": "'NoneType' object is not subscriptable",
+        "file": "/app/quickcart/services/order_service/controllers/orderController.py",
+        "function": "create_order",
+        "line": 34,
+        "logger": "order-service",
+        "traceback": "Traceback (most recent call last):\n  File \"/app/quickcart/services/order_service/controllers/orderController.py\", line 34, in create_order\n    delivery_pincode = user[\"address\"][\"pincode\"]\nTypeError: 'NoneType' object is not subscriptable",
+        "extra": {
+            "user_id": "63f1a2b3c4d5e6f7a8b9c0d5",
+            "order_id": null
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:18:22.300Z"
+        },
+        "level": "ERROR",
+        "service": "order-service",
+        "message": "list index out of range",
+        "file": "/app/quickcart/services/order_service/controllers/cartController.py",
+        "function": "get_cart_summary",
+        "line": 51,
+        "logger": "order-service",
+        "traceback": "Traceback (most recent call last):\n  File \"/app/quickcart/services/order_service/controllers/cartController.py\", line 51, in get_cart_summary\n    first_item = items[0]\nIndexError: list index out of range",
+        "extra": {
+            "user_id": "63f1a2b3c4d5e6f7a8b9c0d3"
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:18:45.512Z"
+        },
+        "level": "ERROR",
+        "service": "order-service",
+        "message": "list index out of range",
+        "file": "/app/quickcart/services/order_service/controllers/cartController.py",
+        "function": "get_cart_summary",
+        "line": 51,
+        "logger": "order-service",
+        "traceback": "Traceback (most recent call last):\n  File \"/app/quickcart/services/order_service/controllers/cartController.py\", line 51, in get_cart_summary\n    first_item = items[0]\nIndexError: list index out of range",
+        "extra": {
+            "user_id": "63f1a2b3c4d5e6f7a8b9c0d7"
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:21:03.198Z"
+        },
+        "level": "ERROR",
+        "service": "order-service",
+        "message": "unsupported operand type(s) for +: 'float' and 'str'",
+        "file": "/app/quickcart/services/order_service/utils/priceCalculator.py",
+        "function": "apply_flat_discount",
+        "line": 58,
+        "logger": "order-service",
+        "traceback": "Traceback (most recent call last):\n  File \"/app/quickcart/services/order_service/controllers/orderController.py\", line 46, in create_order\n    pricing = await calculate_final_price(cart_total, coupon_code)\n  File \"/app/quickcart/services/order_service/utils/priceCalculator.py\", line 58, in apply_flat_discount\n    return amount - discount\nTypeError: unsupported operand type(s) for -: 'float' and 'str'",
+        "extra": {
+            "user_id": "63f1a2b3c4d5e6f7a8b9c0d4",
+            "coupon_code": "FLAT100"
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:25:17.634Z"
+        },
+        "level": "ERROR",
+        "service": "payment-service",
+        "message": "unsupported operand type(s) for +: 'float' and 'str'",
+        "file": "/app/quickcart/services/payment_service/utils/refundHandler.py",
+        "function": "process_refund",
+        "line": 28,
+        "logger": "payment-service",
+        "traceback": "Traceback (most recent call last):\n  File \"/app/quickcart/services/payment_service/controllers/paymentController.py\", line 89, in refund_payment\n    result = await process_refund(order_id, reason)\n  File \"/app/quickcart/services/payment_service/utils/refundHandler.py\", line 28, in process_refund\n    refund_amount = order[\"final_amount\"] + order[\"discount_amount\"]\nTypeError: unsupported operand type(s) for +: 'float' and 'str'",
+        "extra": {
+            "order_id": "63f1a2b3c4d5e6f7a8b9c0e1"
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:25:44.091Z"
+        },
+        "level": "ERROR",
+        "service": "payment-service",
+        "message": "unsupported operand type(s) for +: 'float' and 'str'",
+        "file": "/app/quickcart/services/payment_service/utils/refundHandler.py",
+        "function": "process_refund",
+        "line": 28,
+        "logger": "payment-service",
+        "traceback": "Traceback (most recent call last):\n  File \"/app/quickcart/services/payment_service/controllers/paymentController.py\", line 89, in refund_payment\n    result = await process_refund(order_id, reason)\n  File \"/app/quickcart/services/payment_service/utils/refundHandler.py\", line 28, in process_refund\n    refund_amount = order[\"final_amount\"] + order[\"discount_amount\"]\nTypeError: unsupported operand type(s) for +: 'float' and 'str'",
+        "extra": {
+            "order_id": "63f1a2b3c4d5e6f7a8b9c0e2"
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:30:05.772Z"
+        },
+        "level": "ERROR",
+        "service": "payment-service",
+        "message": "Payment initiation failed: HTTPSConnectionPool(host='api.stripe.com', port=443): Read timed out. (read timeout=None)",
+        "file": "/app/quickcart/services/payment_service/providers/stripeProvider.py",
+        "function": "create_payment_intent",
+        "line": 19,
+        "logger": "payment-service",
+        "traceback": "Traceback (most recent call last):\n  File \"/app/quickcart/services/payment_service/providers/stripeProvider.py\", line 19, in create_payment_intent\n    intent = stripe.PaymentIntent.create(\n  File \"/usr/local/lib/python3.11/site-packages/stripe/api_resources/payment_intent.py\", line 90, in create\n    return cls._static_request(\"post\", cls.class_url(), **params)\nstripe.error.APIConnectionError: HTTPSConnectionPool(host='api.stripe.com', port=443): Read timed out. (read timeout=None)",
+        "extra": {
+            "order_id": "63f1a2b3c4d5e6f7a8b9c0e3",
+            "amount": 4599.0
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:30:47.119Z"
+        },
+        "level": "ERROR",
+        "service": "payment-service",
+        "message": "Payment initiation failed: HTTPSConnectionPool(host='api.stripe.com', port=443): Read timed out. (read timeout=None)",
+        "file": "/app/quickcart/services/payment_service/providers/stripeProvider.py",
+        "function": "create_payment_intent",
+        "line": 19,
+        "logger": "payment-service",
+        "traceback": "Traceback (most recent call last):\n  File \"/app/quickcart/services/payment_service/providers/stripeProvider.py\", line 19, in create_payment_intent\n    intent = stripe.PaymentIntent.create(\n  File \"/usr/local/lib/python3.11/site-packages/stripe/api_resources/payment_intent.py\", line 90, in create\n    return cls._static_request(\"post\", cls.class_url(), **params)\nstripe.error.APIConnectionError: HTTPSConnectionPool(host='api.stripe.com', port=443): Read timed out. (read timeout=None)",
+        "extra": {
+            "order_id": "63f1a2b3c4d5e6f7a8b9c0e4",
+            "amount": 1299.0
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:33:14.445Z"
+        },
+        "level": "ERROR",
+        "service": "payment-service",
+        "message": "Reconciliation error for 63f1a2b3c4d5e6f7a8b9c0e5: maximum recursion depth exceeded",
+        "file": "/app/quickcart/jobs/paymentReconciliation.py",
+        "function": "reconcile_payment",
+        "line": 47,
+        "logger": "payment-service",
+        "traceback": "Traceback (most recent call last):\n  File \"/app/quickcart/jobs/paymentReconciliation.py\", line 47, in reconcile_payment\n    await reconcile_payment(order_id, attempt + 1)\n  File \"/app/quickcart/jobs/paymentReconciliation.py\", line 47, in reconcile_payment\n    await reconcile_payment(order_id, attempt + 1)\n  File \"/app/quickcart/jobs/paymentReconciliation.py\", line 47, in reconcile_payment\n    await reconcile_payment(order_id, attempt + 1)\n  [Previous line repeated 993 more times]\nRecursionError: maximum recursion depth exceeded",
+        "extra": {
+            "order_id": "63f1a2b3c4d5e6f7a8b9c0e5",
+            "attempt": 0
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:33:58.801Z"
+        },
+        "level": "ERROR",
+        "service": "payment-service",
+        "message": "Reconciliation error for 63f1a2b3c4d5e6f7a8b9c0e6: maximum recursion depth exceeded",
+        "file": "/app/quickcart/jobs/paymentReconciliation.py",
+        "function": "reconcile_payment",
+        "line": 47,
+        "logger": "payment-service",
+        "traceback": "Traceback (most recent call last):\n  File \"/app/quickcart/jobs/paymentReconciliation.py\", line 47, in reconcile_payment\n    await reconcile_payment(order_id, attempt + 1)\n  File \"/app/quickcart/jobs/paymentReconciliation.py\", line 47, in reconcile_payment\n    await reconcile_payment(order_id, attempt + 1)\n  [Previous line repeated 993 more times]\nRecursionError: maximum recursion depth exceeded",
+        "extra": {
+            "order_id": "63f1a2b3c4d5e6f7a8b9c0e6",
+            "attempt": 0
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:37:22.553Z"
+        },
+        "level": "ERROR",
+        "service": "delivery-service",
+        "message": "Shipment creation failed for order 63f1a2b3c4d5e6f7a8b9c0f1: HTTPSConnectionPool(host='apiv2.shiprocket.in', port=443): Read timed out. (read timeout=None)",
+        "file": "/app/quickcart/services/delivery_service/integrations/shiprocketClient.py",
+        "function": "create_shipment",
+        "line": 38,
+        "logger": "delivery-service",
+        "traceback": "Traceback (most recent call last):\n  File \"/app/quickcart/services/delivery_service/controllers/deliveryController.py\", line 65, in ship_order\n    result = create_shipment(payload)\n  File \"/app/quickcart/services/delivery_service/integrations/shiprocketClient.py\", line 38, in create_shipment\n    resp = requests.post(\n  File \"/usr/local/lib/python3.11/site-packages/requests/adapters.py\", line 532, in send\n    raise ReadTimeout(e, request=request)\nrequests.exceptions.ReadTimeout: HTTPSConnectionPool(host='apiv2.shiprocket.in', port=443): Read timed out. (read timeout=None)",
+        "extra": {
+            "order_id": "63f1a2b3c4d5e6f7a8b9c0f1"
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:38:01.229Z"
+        },
+        "level": "ERROR",
+        "service": "delivery-service",
+        "message": "Shipment creation failed for order 63f1a2b3c4d5e6f7a8b9c0f2: HTTPSConnectionPool(host='apiv2.shiprocket.in', port=443): Read timed out. (read timeout=None)",
+        "file": "/app/quickcart/services/delivery_service/integrations/shiprocketClient.py",
+        "function": "create_shipment",
+        "line": 38,
+        "logger": "delivery-service",
+        "traceback": "Traceback (most recent call last):\n  File \"/app/quickcart/services/delivery_service/controllers/deliveryController.py\", line 65, in ship_order\n    result = create_shipment(payload)\n  File \"/app/quickcart/services/delivery_service/integrations/shiprocketClient.py\", line 38, in create_shipment\n    resp = requests.post(\nrequests.exceptions.ReadTimeout: HTTPSConnectionPool(host='apiv2.shiprocket.in', port=443): Read timed out. (read timeout=None)",
+        "extra": {
+            "order_id": "63f1a2b3c4d5e6f7a8b9c0f2"
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:39:14.008Z"
+        },
+        "level": "ERROR",
+        "service": "delivery-service",
+        "message": "404 Client Error: Not Found for url: https://apiv2.shiprocket.in/v1/external/courier/track/awb/None",
+        "file": "/app/quickcart/services/delivery_service/controllers/deliveryController.py",
+        "function": "track_order",
+        "line": 83,
+        "logger": "delivery-service",
+        "traceback": "Traceback (most recent call last):\n  File \"/app/quickcart/services/delivery_service/controllers/deliveryController.py\", line 83, in track_order\n    result = track_shipment(tracking_id)\n  File \"/app/quickcart/services/delivery_service/integrations/shiprocketClient.py\", line 50, in track_shipment\n    resp.raise_for_status()\nrequests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://apiv2.shiprocket.in/v1/external/courier/track/awb/None",
+        "extra": {
+            "order_id": "63f1a2b3c4d5e6f7a8b9c0f3",
+            "tracking_id": null
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:41:05.337Z"
+        },
+        "level": "ERROR",
+        "service": "auth-service",
+        "message": "Express error on GET /auth/profile: Cannot read properties of undefined (reading 'split')",
+        "file": "/app/quickcart/services/auth-service/middleware/tokenValidator.js",
+        "function": "tokenValidator",
+        "line": 5,
+        "logger": "auth-service",
+        "traceback": "TypeError: Cannot read properties of undefined (reading 'split')\n    at tokenValidator (/app/quickcart/services/auth-service/middleware/tokenValidator.js:5:45)\n    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)\n    at next (/app/node_modules/express/lib/router/route.js:149:13)",
+        "extra": {
+            "path": "/auth/profile",
+            "method": "GET"
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:41:38.992Z"
+        },
+        "level": "ERROR",
+        "service": "auth-service",
+        "message": "Express error on GET /auth/profile: Cannot read properties of undefined (reading 'split')",
+        "file": "/app/quickcart/services/auth-service/middleware/tokenValidator.js",
+        "function": "tokenValidator",
+        "line": 5,
+        "logger": "auth-service",
+        "traceback": "TypeError: Cannot read properties of undefined (reading 'split')\n    at tokenValidator (/app/quickcart/services/auth-service/middleware/tokenValidator.js:5:45)\n    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)\n    at next (/app/node_modules/express/lib/router/route.js:149:13)",
+        "extra": {
+            "path": "/auth/profile",
+            "method": "GET"
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:42:19.774Z"
+        },
+        "level": "ERROR",
+        "service": "auth-service",
+        "message": "Express error on GET /auth/profile: invalid token",
+        "file": "/app/quickcart/services/auth-service/utils/jwtHelper.js",
+        "function": "verifyToken",
+        "line": 10,
+        "logger": "auth-service",
+        "traceback": "JsonWebTokenError: invalid token\n    at /app/node_modules/jsonwebtoken/verify.js:63:21\n    at verifyToken (/app/quickcart/services/auth-service/utils/jwtHelper.js:10:20)\n    at tokenValidator (/app/quickcart/services/auth-service/middleware/tokenValidator.js:7:21)",
+        "extra": {
+            "path": "/auth/profile",
+            "method": "GET"
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:42:55.001Z"
+        },
+        "level": "ERROR",
+        "service": "auth-service",
+        "message": "Express error on GET /auth/profile: jwt expired",
+        "file": "/app/quickcart/services/auth-service/utils/jwtHelper.js",
+        "function": "verifyToken",
+        "line": 10,
+        "logger": "auth-service",
+        "traceback": "TokenExpiredError: jwt expired\n    at /app/node_modules/jsonwebtoken/verify.js:89:21\n    at verifyToken (/app/quickcart/services/auth-service/utils/jwtHelper.js:10:20)\n    at tokenValidator (/app/quickcart/services/auth-service/middleware/tokenValidator.js:7:21)",
+        "extra": {
+            "path": "/auth/profile",
+            "method": "GET"
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:45:11.628Z"
+        },
+        "level": "ERROR",
+        "service": "auth-service",
+        "message": "UnhandledPromiseRejection: Cannot read properties of null (reading 'expiresAt')",
+        "file": "/app/quickcart/services/auth-service/controllers/sessionController.js",
+        "function": "validateSession",
+        "line": 20,
+        "logger": "auth-service",
+        "traceback": "TypeError: Cannot read properties of null (reading 'expiresAt')\n    at validateSession (/app/quickcart/services/auth-service/controllers/sessionController.js:20:16)\n    at process.emit (node:events:513:28)\n    at process.on.reason (/app/quickcart/shared/logging/mongoHandler.js:62:5)",
+        "extra": {
+            "session_id": "fakesession_abc123"
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:45:49.302Z"
+        },
+        "level": "ERROR",
+        "service": "auth-service",
+        "message": "UnhandledPromiseRejection: Cannot read properties of null (reading 'expiresAt')",
+        "file": "/app/quickcart/services/auth-service/controllers/sessionController.js",
+        "function": "validateSession",
+        "line": 20,
+        "logger": "auth-service",
+        "traceback": "TypeError: Cannot read properties of null (reading 'expiresAt')\n    at validateSession (/app/quickcart/services/auth-service/controllers/sessionController.js:20:16)\n    at process.emit (node:events:513:28)",
+        "extra": {
+            "session_id": "fakesession_xyz789"
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:48:03.115Z"
+        },
+        "level": "ERROR",
+        "service": "notification-service",
+        "message": "notifyOrderConfirmed failed for order 63f1a2b3c4d5e6f7a8b9c0d9: Cannot read properties of null (reading 'email')",
+        "file": "/app/quickcart/services/notification-service/controllers/notificationController.js",
+        "function": "notifyOrderConfirmed",
+        "line": 22,
+        "logger": "notification-service",
+        "traceback": "TypeError: Cannot read properties of null (reading 'email')\n    at notifyOrderConfirmed (/app/quickcart/services/notification-service/controllers/notificationController.js:22:22)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+        "extra": {
+            "order_id": "63f1a2b3c4d5e6f7a8b9c0d9",
+            "user_id": "63f1a2b3c4d5e6f7a8b9c0d9"
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:48:37.441Z"
+        },
+        "level": "ERROR",
+        "service": "notification-service",
+        "message": "notifyOrderConfirmed failed for order 63f1a2b3c4d5e6f7a8b9c0da: Cannot read properties of null (reading 'email')",
+        "file": "/app/quickcart/services/notification-service/controllers/notificationController.js",
+        "function": "notifyOrderConfirmed",
+        "line": 22,
+        "logger": "notification-service",
+        "traceback": "TypeError: Cannot read properties of null (reading 'email')\n    at notifyOrderConfirmed (/app/quickcart/services/notification-service/controllers/notificationController.js:22:22)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+        "extra": {
+            "order_id": "63f1a2b3c4d5e6f7a8b9c0da",
+            "user_id": "deleted_user_001"
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:49:14.889Z"
+        },
+        "level": "ERROR",
+        "service": "notification-service",
+        "message": "UnhandledPromiseRejection: Forbidden",
+        "file": "/app/quickcart/services/notification-service/providers/emailProvider.js",
+        "function": "sendOrderConfirmation",
+        "line": 18,
+        "logger": "notification-service",
+        "traceback": "ResponseError: Forbidden\n    at /app/node_modules/@sendgrid/client/src/classes/client.js:109:21\n    at process.emit (node:events:513:28)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\nNote: sgMail.send() was not awaited — promise rejection unhandled",
+        "extra": {
+            "to": "user@example.com",
+            "subject": "Order Confirmed"
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:49:52.003Z"
+        },
+        "level": "ERROR",
+        "service": "notification-service",
+        "message": "UnhandledPromiseRejection: Forbidden",
+        "file": "/app/quickcart/services/notification-service/providers/emailProvider.js",
+        "function": "sendRefundNotification",
+        "line": 44,
+        "logger": "notification-service",
+        "traceback": "ResponseError: Forbidden\n    at /app/node_modules/@sendgrid/client/src/classes/client.js:109:21\n    at process.emit (node:events:513:28)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\nNote: sgMail.send() was not awaited — promise rejection unhandled",
+        "extra": {
+            "to": "refund@example.com",
+            "amount": 799.0
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:52:07.341Z"
+        },
+        "level": "ERROR",
+        "service": "order-service",
+        "message": "KeyError: 'INVENTORY_API_URL'",
+        "file": "/app/quickcart/jobs/inventorySync.py",
+        "function": "<module>",
+        "line": 11,
+        "logger": "order-service",
+        "traceback": "Traceback (most recent call last):\n  File \"/app/quickcart/jobs/inventorySync.py\", line 11, in <module>\n    INVENTORY_API_URL = os.environ[\"INVENTORY_API_URL\"]\nKeyError: 'INVENTORY_API_URL'",
+        "extra": null
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:55:33.628Z"
+        },
+        "level": "WARNING",
+        "service": "order-service",
+        "message": "Coupon SAVE200 applied concurrently by 2 requests — possible duplicate usage",
+        "file": "/app/quickcart/services/order_service/utils/priceCalculator.py",
+        "function": "calculate_final_price",
+        "line": 34,
+        "logger": "order-service",
+        "traceback": null,
+        "extra": {
+            "coupon_code": "SAVE200",
+            "uses_remaining_before": 1,
+            "concurrent_requests": 2
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T04:55:34.101Z"
+        },
+        "level": "WARNING",
+        "service": "order-service",
+        "message": "Coupon SAVE200 applied concurrently by 2 requests — possible duplicate usage",
+        "file": "/app/quickcart/services/order_service/utils/priceCalculator.py",
+        "function": "calculate_final_price",
+        "line": 34,
+        "logger": "order-service",
+        "traceback": null,
+        "extra": {
+            "coupon_code": "SAVE200",
+            "uses_remaining_before": 1,
+            "concurrent_requests": 2
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T05:01:14.772Z"
+        },
+        "level": "ERROR",
+        "service": "order-service",
+        "message": "'NoneType' object is not subscriptable",
+        "file": "/app/quickcart/services/order_service/controllers/orderController.py",
+        "function": "create_order",
+        "line": 34,
+        "logger": "order-service",
+        "traceback": "Traceback (most recent call last):\n  File \"/app/quickcart/services/order_service/controllers/orderController.py\", line 34, in create_order\n    delivery_pincode = user[\"address\"][\"pincode\"]\nTypeError: 'NoneType' object is not subscriptable",
+        "extra": {
+            "user_id": "63f1a2b3c4d5e6f7a8b9c0d8",
+            "order_id": null
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T05:03:47.019Z"
+        },
+        "level": "ERROR",
+        "service": "payment-service",
+        "message": "Payment initiation failed: HTTPSConnectionPool(host='api.stripe.com', port=443): Read timed out. (read timeout=None)",
+        "file": "/app/quickcart/services/payment_service/providers/stripeProvider.py",
+        "function": "create_payment_intent",
+        "line": 19,
+        "logger": "payment-service",
+        "traceback": "Traceback (most recent call last):\n  File \"/app/quickcart/services/payment_service/providers/stripeProvider.py\", line 19, in create_payment_intent\n    intent = stripe.PaymentIntent.create(\nstripe.error.APIConnectionError: HTTPSConnectionPool(host='api.stripe.com', port=443): Read timed out. (read timeout=None)",
+        "extra": {
+            "order_id": "63f1a2b3c4d5e6f7a8b9c0e7",
+            "amount": 2199.0
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T05:07:22.441Z"
+        },
+        "level": "ERROR",
+        "service": "auth-service",
+        "message": "Express error on GET /auth/profile: Cannot read properties of undefined (reading 'split')",
+        "file": "/app/quickcart/services/auth-service/middleware/tokenValidator.js",
+        "function": "tokenValidator",
+        "line": 5,
+        "logger": "auth-service",
+        "traceback": "TypeError: Cannot read properties of undefined (reading 'split')\n    at tokenValidator (/app/quickcart/services/auth-service/middleware/tokenValidator.js:5:45)",
+        "extra": {
+            "path": "/auth/profile",
+            "method": "GET"
+        }
+    },
+    {
+        "timestamp": {
+            "$date": "2026-03-16T05:10:05.883Z"
+        },
+        "level": "ERROR",
+        "service": "delivery-service",
+        "message": "Shipment creation failed for order 63f1a2b3c4d5e6f7a8b9c0f4: HTTPSConnectionPool(host='apiv2.shiprocket.in', port=443): Read timed out. (read timeout=None)",
+        "file": "/app/quickcart/services/delivery_service/integrations/shiprocketClient.py",
+        "function": "create_shipment",
+        "line": 38,
+        "logger": "delivery-service",
+        "traceback": "Traceback (most recent call last):\n  File \"/app/quickcart/services/delivery_service/controllers/deliveryController.py\", line 65, in ship_order\n    result = create_shipment(payload)\n  File \"/app/quickcart/services/delivery_service/integrations/shiprocketClient.py\", line 38, in create_shipment\n    resp = requests.post(\nrequests.exceptions.ReadTimeout: HTTPSConnectionPool(host='apiv2.shiprocket.in', port=443): Read timed out. (read timeout=None)",
+        "extra": {
+            "order_id": "63f1a2b3c4d5e6f7a8b9c0f4"
+        }
+    }
+]

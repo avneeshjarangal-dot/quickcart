@@ -1,0 +1,647 @@
+[
+    {
+        "timestamp": "2026-03-16T04:01:12.341Z",
+        "level": "INFO",
+        "service": "order-service",
+        "trace_id": "a1b2c3d4e5f6",
+        "user_id": "usr_9f3a1c",
+        "message": "POST /api/v1/orders called",
+        "file": "services/order-service/controllers/orderController.py",
+        "line": 28
+    },
+    {
+        "timestamp": "2026-03-16T04:01:12.349Z",
+        "level": "INFO",
+        "service": "order-service",
+        "trace_id": "a1b2c3d4e5f6",
+        "user_id": "usr_9f3a1c",
+        "message": "User fetched from DB",
+        "file": "services/order-service/controllers/orderController.py",
+        "line": 33
+    },
+    {
+        "timestamp": "2026-03-16T04:01:12.351Z",
+        "level": "ERROR",
+        "service": "order-service",
+        "trace_id": "a1b2c3d4e5f6",
+        "user_id": "usr_9f3a1c",
+        "message": "Unhandled exception in create_order",
+        "file": "services/order-service/controllers/orderController.py",
+        "line": 38,
+        "error": "TypeError: 'NoneType' object is not subscriptable",
+        "stack_trace": "Traceback (most recent call last):\n  File \"services/order-service/controllers/orderController.py\", line 38, in create_order\n    delivery_pincode = user[\"address\"][\"pincode\"]\nTypeError: 'NoneType' object is not subscriptable",
+        "context": {
+            "user_id": "usr_9f3a1c",
+            "user_address": null,
+            "order_items": [
+                {
+                    "product_id": "prod_882",
+                    "quantity": 2
+                }
+            ]
+        }
+    },
+    {
+        "timestamp": "2026-03-16T04:01:12.352Z",
+        "level": "INFO",
+        "service": "order-service",
+        "trace_id": "a1b2c3d4e5f6",
+        "message": "Returning HTTP 500 to client",
+        "file": "services/order-service/controllers/orderController.py",
+        "line": 72
+    },
+    {
+        "timestamp": "2026-03-16T04:03:45.112Z",
+        "level": "INFO",
+        "service": "order-service",
+        "trace_id": "b2c3d4e5f6a1",
+        "user_id": "usr_7d2b9e",
+        "message": "GET /api/v1/cart/usr_7d2b9e/summary called",
+        "file": "services/order-service/controllers/cartController.py",
+        "line": 47
+    },
+    {
+        "timestamp": "2026-03-16T04:03:45.118Z",
+        "level": "INFO",
+        "service": "order-service",
+        "trace_id": "b2c3d4e5f6a1",
+        "user_id": "usr_7d2b9e",
+        "message": "Cart fetched from DB",
+        "file": "services/order-service/controllers/cartController.py",
+        "line": 52
+    },
+    {
+        "timestamp": "2026-03-16T04:03:45.120Z",
+        "level": "ERROR",
+        "service": "order-service",
+        "trace_id": "b2c3d4e5f6a1",
+        "user_id": "usr_7d2b9e",
+        "message": "Unhandled exception in get_cart_summary",
+        "file": "services/order-service/controllers/cartController.py",
+        "line": 61,
+        "error": "IndexError: list index out of range",
+        "stack_trace": "Traceback (most recent call last):\n  File \"services/order-service/controllers/cartController.py\", line 61, in get_cart_summary\n    first_item = items[0]\nIndexError: list index out of range",
+        "context": {
+            "user_id": "usr_7d2b9e",
+            "cart_items": [],
+            "cart_id": "cart_003f1a"
+        }
+    },
+    {
+        "timestamp": "2026-03-16T04:06:22.771Z",
+        "level": "INFO",
+        "service": "order-service",
+        "trace_id": "c3d4e5f6a1b2",
+        "user_id": "usr_3c8f2d",
+        "message": "Coupon SAVE20 apply requested",
+        "file": "services/order-service/utils/priceCalculator.py",
+        "line": 34
+    },
+    {
+        "timestamp": "2026-03-16T04:06:22.773Z",
+        "level": "INFO",
+        "service": "order-service",
+        "trace_id": "c3d4e5f6a1b2",
+        "user_id": "usr_3c8f2d",
+        "message": "Coupon SAVE20 fetched, uses_remaining: 1",
+        "file": "services/order-service/utils/priceCalculator.py",
+        "line": 40
+    },
+    {
+        "timestamp": "2026-03-16T04:06:22.773Z",
+        "level": "INFO",
+        "service": "order-service",
+        "trace_id": "d4e5f6a1b2c3",
+        "user_id": "usr_5a1e9b",
+        "message": "Coupon SAVE20 apply requested",
+        "file": "services/order-service/utils/priceCalculator.py",
+        "line": 34
+    },
+    {
+        "timestamp": "2026-03-16T04:06:22.774Z",
+        "level": "INFO",
+        "service": "order-service",
+        "trace_id": "d4e5f6a1b2c3",
+        "user_id": "usr_5a1e9b",
+        "message": "Coupon SAVE20 fetched, uses_remaining: 1",
+        "file": "services/order-service/utils/priceCalculator.py",
+        "line": 40
+    },
+    {
+        "timestamp": "2026-03-16T04:06:22.775Z",
+        "level": "INFO",
+        "service": "order-service",
+        "trace_id": "c3d4e5f6a1b2",
+        "user_id": "usr_3c8f2d",
+        "message": "Coupon SAVE20 applied, decrementing uses_remaining",
+        "file": "services/order-service/utils/priceCalculator.py",
+        "line": 44
+    },
+    {
+        "timestamp": "2026-03-16T04:06:22.775Z",
+        "level": "INFO",
+        "service": "order-service",
+        "trace_id": "d4e5f6a1b2c3",
+        "user_id": "usr_5a1e9b",
+        "message": "Coupon SAVE20 applied, decrementing uses_remaining",
+        "file": "services/order-service/utils/priceCalculator.py",
+        "line": 44
+    },
+    {
+        "timestamp": "2026-03-16T04:06:22.779Z",
+        "level": "WARN",
+        "service": "order-service",
+        "trace_id": "c3d4e5f6a1b2",
+        "message": "Race condition detected: coupon SAVE20 applied twice before uses_remaining could reach 0",
+        "file": "services/order-service/utils/priceCalculator.py",
+        "line": 44,
+        "context": {
+            "coupon_code": "SAVE20",
+            "concurrent_requests": 2,
+            "uses_remaining_before": 1,
+            "uses_remaining_after": -1
+        }
+    },
+    {
+        "timestamp": "2026-03-16T04:08:05.441Z",
+        "level": "INFO",
+        "service": "payment-service",
+        "trace_id": "e5f6a1b2c3d4",
+        "order_id": "ord_7f3b2c",
+        "message": "Refund initiated for order ord_7f3b2c",
+        "file": "services/payment-service/utils/refundHandler.py",
+        "line": 22
+    },
+    {
+        "timestamp": "2026-03-16T04:08:05.449Z",
+        "level": "INFO",
+        "service": "payment-service",
+        "trace_id": "e5f6a1b2c3d4",
+        "order_id": "ord_7f3b2c",
+        "message": "Order fetched from DB",
+        "file": "services/payment-service/utils/refundHandler.py",
+        "line": 28
+    },
+    {
+        "timestamp": "2026-03-16T04:08:05.451Z",
+        "level": "ERROR",
+        "service": "payment-service",
+        "trace_id": "e5f6a1b2c3d4",
+        "order_id": "ord_7f3b2c",
+        "message": "Unhandled exception in process_refund",
+        "file": "services/payment-service/utils/refundHandler.py",
+        "line": 33,
+        "error": "TypeError: unsupported operand type(s) for +: 'float' and 'str'",
+        "stack_trace": "Traceback (most recent call last):\n  File \"services/payment-service/utils/refundHandler.py\", line 33, in process_refund\n    refund_amount = order[\"final_amount\"] + order[\"discount_amount\"]\nTypeError: unsupported operand type(s) for +: 'float' and 'str'",
+        "context": {
+            "order_id": "ord_7f3b2c",
+            "final_amount": 1299.0,
+            "discount_amount": "200",
+            "discount_amount_type": "str"
+        }
+    },
+    {
+        "timestamp": "2026-03-16T04:11:33.881Z",
+        "level": "INFO",
+        "service": "payment-service",
+        "trace_id": "f6a1b2c3d4e5",
+        "order_id": "ord_2a9c4d",
+        "message": "Initiating Stripe PaymentIntent",
+        "file": "services/payment-service/providers/stripeProvider.py",
+        "line": 17
+    },
+    {
+        "timestamp": "2026-03-16T04:11:44.003Z",
+        "level": "WARN",
+        "service": "payment-service",
+        "trace_id": "f6a1b2c3d4e5",
+        "order_id": "ord_2a9c4d",
+        "message": "Stripe API call still pending after 10s",
+        "file": "services/payment-service/providers/stripeProvider.py",
+        "line": 17
+    },
+    {
+        "timestamp": "2026-03-16T04:12:03.992Z",
+        "level": "ERROR",
+        "service": "payment-service",
+        "trace_id": "f6a1b2c3d4e5",
+        "order_id": "ord_2a9c4d",
+        "message": "Stripe API call timed out after 30s \u2014 no timeout configured",
+        "file": "services/payment-service/providers/stripeProvider.py",
+        "line": 17,
+        "error": "stripe.error.APIConnectionError: Request timed out connecting to https://api.stripe.com",
+        "stack_trace": "Traceback (most recent call last):\n  File \"services/payment-service/providers/stripeProvider.py\", line 17, in create_payment_intent\n    intent = stripe.PaymentIntent.create(\nstripe.error.APIConnectionError: Request timed out connecting to https://api.stripe.com",
+        "context": {
+            "duration_ms": 30111,
+            "timeout_configured": false,
+            "retry_configured": false
+        }
+    },
+    {
+        "timestamp": "2026-03-16T04:14:19.221Z",
+        "level": "INFO",
+        "service": "order-service",
+        "trace_id": "a2b3c4d5e6f7",
+        "message": "Connecting to MongoDB Atlas",
+        "file": "shared/db/mongoClient.py",
+        "line": 14
+    },
+    {
+        "timestamp": "2026-03-16T04:14:49.340Z",
+        "level": "ERROR",
+        "service": "order-service",
+        "trace_id": "a2b3c4d5e6f7",
+        "message": "MongoDB connection failed \u2014 no pool limit or reconnect configured",
+        "file": "shared/db/mongoClient.py",
+        "line": 17,
+        "error": "pymongo.errors.ServerSelectionTimeoutError: quickcart.xxxxx.mongodb.net:27017: [Errno -2] Name or service not known",
+        "stack_trace": "Traceback (most recent call last):\n  File \"shared/db/mongoClient.py\", line 17, in get_client\n    _client = MongoClient(mongo_uri)\n  File \"site-packages/pymongo/mongo_client.py\", line 698, in __init__\n    res = self._topology._select_servers_loop(...)\npymongo.errors.ServerSelectionTimeoutError: quickcart.xxxxx.mongodb.net:27017",
+        "context": {
+            "pool_limit_configured": false,
+            "reconnect_configured": false,
+            "timeout_configured": false
+        }
+    },
+    {
+        "timestamp": "2026-03-16T04:16:55.002Z",
+        "level": "INFO",
+        "service": "auth-service",
+        "trace_id": "b3c4d5e6f7a2",
+        "message": "GET /auth/profile \u2014 incoming request",
+        "file": "services/auth-service/middleware/tokenValidator.js",
+        "line": 4
+    },
+    {
+        "timestamp": "2026-03-16T04:16:55.004Z",
+        "level": "ERROR",
+        "service": "auth-service",
+        "trace_id": "b3c4d5e6f7a2",
+        "message": "Unhandled TypeError \u2014 Authorization header missing",
+        "file": "services/auth-service/middleware/tokenValidator.js",
+        "line": 6,
+        "error": "TypeError: Cannot read properties of undefined (reading 'split')",
+        "stack_trace": "TypeError: Cannot read properties of undefined (reading 'split')\n    at tokenValidator (services/auth-service/middleware/tokenValidator.js:6:45)\n    at Layer.handle [as handle_request] (express/lib/router/layer.js:95:5)\n    at next (express/lib/router/route.js:137:13)",
+        "context": {
+            "authorization_header": null,
+            "route": "GET /auth/profile",
+            "ip": "103.21.58.14"
+        }
+    },
+    {
+        "timestamp": "2026-03-16T04:18:30.774Z",
+        "level": "INFO",
+        "service": "auth-service",
+        "trace_id": "c4d5e6f7a2b3",
+        "message": "POST /auth/session/refresh called",
+        "file": "services/auth-service/controllers/sessionController.js",
+        "line": 31
+    },
+    {
+        "timestamp": "2026-03-16T04:18:30.776Z",
+        "level": "WARN",
+        "service": "auth-service",
+        "trace_id": "c4d5e6f7a2b3",
+        "message": "validateSession called but not awaited \u2014 promise returned but ignored",
+        "file": "services/auth-service/controllers/sessionController.js",
+        "line": 35
+    },
+    {
+        "timestamp": "2026-03-16T04:18:30.781Z",
+        "level": "ERROR",
+        "service": "auth-service",
+        "trace_id": "c4d5e6f7a2b3",
+        "message": "UnhandledPromiseRejectionWarning \u2014 session not found",
+        "file": "services/auth-service/controllers/sessionController.js",
+        "line": 24,
+        "error": "TypeError: Cannot read properties of null (reading 'expiresAt')",
+        "stack_trace": "TypeError: Cannot read properties of null (reading 'expiresAt')\n    at validateSession (services/auth-service/controllers/sessionController.js:24:16)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+        "context": {
+            "session_id": "sess_expired_001",
+            "awaited": false
+        }
+    },
+    {
+        "timestamp": "2026-03-16T04:20:14.553Z",
+        "level": "INFO",
+        "service": "notification-service",
+        "trace_id": "d5e6f7a2b3c4",
+        "order_id": "ord_4b7e1f",
+        "message": "notifyOrderConfirmed called",
+        "file": "services/notification-service/controllers/notificationController.js",
+        "line": 14
+    },
+    {
+        "timestamp": "2026-03-16T04:20:14.559Z",
+        "level": "INFO",
+        "service": "notification-service",
+        "trace_id": "d5e6f7a2b3c4",
+        "order_id": "ord_4b7e1f",
+        "message": "Order fetched. Fetching user contact info.",
+        "file": "services/notification-service/controllers/notificationController.js",
+        "line": 22
+    },
+    {
+        "timestamp": "2026-03-16T04:20:14.563Z",
+        "level": "ERROR",
+        "service": "notification-service",
+        "trace_id": "d5e6f7a2b3c4",
+        "order_id": "ord_4b7e1f",
+        "message": "Unhandled exception \u2014 user is null",
+        "file": "services/notification-service/controllers/notificationController.js",
+        "line": 26,
+        "error": "TypeError: Cannot read properties of null (reading 'email')",
+        "stack_trace": "TypeError: Cannot read properties of null (reading 'email')\n    at notifyOrderConfirmed (services/notification-service/controllers/notificationController.js:26:21)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+        "context": {
+            "order_id": "ord_4b7e1f",
+            "user_id": "usr_deleted_882",
+            "user_found": false
+        }
+    },
+    {
+        "timestamp": "2026-03-16T04:22:47.119Z",
+        "level": "INFO",
+        "service": "notification-service",
+        "trace_id": "e6f7a2b3c4d5",
+        "order_id": "ord_9c2d5a",
+        "message": "sendOrderConfirmation called for usr_1a2b3c",
+        "file": "services/notification-service/providers/emailProvider.js",
+        "line": 14
+    },
+    {
+        "timestamp": "2026-03-16T04:22:47.121Z",
+        "level": "WARN",
+        "service": "notification-service",
+        "trace_id": "e6f7a2b3c4d5",
+        "message": "sgMail.send() called without await \u2014 promise not tracked",
+        "file": "services/notification-service/providers/emailProvider.js",
+        "line": 23
+    },
+    {
+        "timestamp": "2026-03-16T04:22:47.892Z",
+        "level": "ERROR",
+        "service": "notification-service",
+        "trace_id": "e6f7a2b3c4d5",
+        "message": "UnhandledPromiseRejectionWarning \u2014 SendGrid rejected request",
+        "file": "services/notification-service/providers/emailProvider.js",
+        "line": 23,
+        "error": "ResponseError: Unauthorized \u2014 SendGrid API key invalid or expired",
+        "stack_trace": "ResponseError: Unauthorized\n    at /node_modules/@sendgrid/client/src/classes/client.js:117:13\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+        "context": {
+            "to": "user@example.com",
+            "subject": "Order Confirmed \u2014 #ord_9c2d5a",
+            "awaited": false,
+            "api_key_set": true
+        }
+    },
+    {
+        "timestamp": "2026-03-16T04:25:03.334Z",
+        "level": "INFO",
+        "service": "delivery-service",
+        "trace_id": "f7a2b3c4d5e6",
+        "order_id": "ord_6e8f3b",
+        "message": "GET /api/v1/delivery/track/ord_6e8f3b called",
+        "file": "services/delivery-service/controllers/deliveryController.py",
+        "line": 68
+    },
+    {
+        "timestamp": "2026-03-16T04:25:03.338Z",
+        "level": "INFO",
+        "service": "delivery-service",
+        "trace_id": "f7a2b3c4d5e6",
+        "order_id": "ord_6e8f3b",
+        "message": "Order fetched. Calling Shiprocket track API.",
+        "file": "services/delivery-service/controllers/deliveryController.py",
+        "line": 78
+    },
+    {
+        "timestamp": "2026-03-16T04:25:33.891Z",
+        "level": "ERROR",
+        "service": "delivery-service",
+        "trace_id": "f7a2b3c4d5e6",
+        "order_id": "ord_6e8f3b",
+        "message": "Shiprocket API hung \u2014 no timeout configured",
+        "file": "services/delivery-service/integrations/shiprocketClient.py",
+        "line": 38,
+        "error": "requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='apiv2.shiprocket.in', port=443): Read timed out.",
+        "stack_trace": "Traceback (most recent call last):\n  File \"services/delivery-service/integrations/shiprocketClient.py\", line 38, in track_shipment\n    resp = requests.get(\nrequests.exceptions.ReadTimeout: HTTPSConnectionPool(host='apiv2.shiprocket.in', port=443): Read timed out.",
+        "context": {
+            "tracking_id": null,
+            "timeout_configured": false,
+            "fallback_configured": false,
+            "duration_ms": 30553
+        }
+    },
+    {
+        "timestamp": "2026-03-16T04:27:19.002Z",
+        "level": "INFO",
+        "service": "auth-service",
+        "trace_id": "a3b4c5d6e7f8",
+        "message": "verifyToken called",
+        "file": "services/auth-service/utils/jwtHelper.js",
+        "line": 9
+    },
+    {
+        "timestamp": "2026-03-16T04:27:19.004Z",
+        "level": "ERROR",
+        "service": "auth-service",
+        "trace_id": "a3b4c5d6e7f8",
+        "message": "JWT verification crashed \u2014 malformed token not caught",
+        "file": "services/auth-service/utils/jwtHelper.js",
+        "line": 11,
+        "error": "JsonWebTokenError: invalid signature",
+        "stack_trace": "JsonWebTokenError: invalid signature\n    at /node_modules/jsonwebtoken/verify.js:89:21\n    at verifyToken (services/auth-service/utils/jwtHelper.js:11:21)\n    at tokenValidator (services/auth-service/middleware/tokenValidator.js:6:23)\n    at Layer.handle [as handle_request] (express/lib/router/layer.js:95:5)",
+        "context": {
+            "token_preview": "eyJhbGc...tampered",
+            "error_caught": false
+        }
+    },
+    {
+        "timestamp": "2026-03-16T04:29:44.667Z",
+        "level": "INFO",
+        "service": "inventory-sync-job",
+        "trace_id": "b4c5d6e7f8a3",
+        "message": "inventorySync.py starting up",
+        "file": "jobs/inventorySync.py",
+        "line": 1
+    },
+    {
+        "timestamp": "2026-03-16T04:29:44.668Z",
+        "level": "ERROR",
+        "service": "inventory-sync-job",
+        "trace_id": "b4c5d6e7f8a3",
+        "message": "Process crashed at import time \u2014 missing environment variable",
+        "file": "jobs/inventorySync.py",
+        "line": 11,
+        "error": "KeyError: 'INVENTORY_API_URL'",
+        "stack_trace": "Traceback (most recent call last):\n  File \"jobs/inventorySync.py\", line 11, in <module>\n    INVENTORY_API_URL = os.environ[\"INVENTORY_API_URL\"]\nKeyError: 'INVENTORY_API_URL'",
+        "context": {
+            "env_var": "INVENTORY_API_URL",
+            "present_in_env": false,
+            "crash_at_import": true
+        }
+    },
+    {
+        "timestamp": "2026-03-16T04:32:11.445Z",
+        "level": "INFO",
+        "service": "gateway",
+        "trace_id": "c5d6e7f8a3b4",
+        "message": "Rate limiter running. IP table size: 8420 entries",
+        "file": "gateway/middleware/rateLimiter.js",
+        "line": 12
+    },
+    {
+        "timestamp": "2026-03-16T04:32:11.448Z",
+        "level": "WARN",
+        "service": "gateway",
+        "trace_id": "c5d6e7f8a3b4",
+        "message": "Memory usage high \u2014 heap at 91%",
+        "file": "gateway/middleware/rateLimiter.js",
+        "line": 12,
+        "context": {
+            "ip_table_size": 8420,
+            "heap_used_mb": 412,
+            "heap_total_mb": 450,
+            "cleanup_running": false,
+            "ttl_configured": false
+        }
+    },
+    {
+        "timestamp": "2026-03-16T04:33:02.001Z",
+        "level": "ERROR",
+        "service": "gateway",
+        "trace_id": "c5d6e7f8a3b4",
+        "message": "Process OOM killed \u2014 heap exhausted by unbounded IP table",
+        "file": "gateway/middleware/rateLimiter.js",
+        "line": 12,
+        "error": "FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed \u2014 JavaScript heap out of memory",
+        "stack_trace": "FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory\n 1: 0xb7c3a0 node::Abort() [node]\n 2: 0xa91f89 node::FatalError(char const*, char const*) [node]\n 3: 0xd9ae9e v8::Utils::ReportOOMFailure(...) [node]",
+        "context": {
+            "ip_table_size": 8761,
+            "uptime_hours": 18.4,
+            "cleanup_function_defined": true,
+            "cleanup_function_called": false
+        }
+    },
+    {
+        "timestamp": "2026-03-16T04:35:58.112Z",
+        "level": "INFO",
+        "service": "payment-reconciliation-job",
+        "trace_id": "d6e7f8a3b4c5",
+        "order_id": "ord_3d1e9f",
+        "message": "reconcile_payment called \u2014 attempt 0",
+        "file": "jobs/paymentReconciliation.py",
+        "line": 18
+    },
+    {
+        "timestamp": "2026-03-16T04:35:58.341Z",
+        "level": "INFO",
+        "service": "payment-reconciliation-job",
+        "trace_id": "d6e7f8a3b4c5",
+        "order_id": "ord_3d1e9f",
+        "message": "Stripe status: processing \u2014 retrying recursively",
+        "file": "jobs/paymentReconciliation.py",
+        "line": 38
+    },
+    {
+        "timestamp": "2026-03-16T04:35:58.552Z",
+        "level": "INFO",
+        "service": "payment-reconciliation-job",
+        "trace_id": "d6e7f8a3b4c5",
+        "order_id": "ord_3d1e9f",
+        "message": "reconcile_payment called \u2014 attempt 1",
+        "file": "jobs/paymentReconciliation.py",
+        "line": 18
+    },
+    {
+        "timestamp": "2026-03-16T04:35:58.761Z",
+        "level": "INFO",
+        "service": "payment-reconciliation-job",
+        "trace_id": "d6e7f8a3b4c5",
+        "order_id": "ord_3d1e9f",
+        "message": "Stripe status: processing \u2014 retrying recursively",
+        "file": "jobs/paymentReconciliation.py",
+        "line": 38
+    },
+    {
+        "timestamp": "2026-03-16T04:35:58.970Z",
+        "level": "INFO",
+        "service": "payment-reconciliation-job",
+        "trace_id": "d6e7f8a3b4c5",
+        "order_id": "ord_3d1e9f",
+        "message": "reconcile_payment called \u2014 attempt 2",
+        "file": "jobs/paymentReconciliation.py",
+        "line": 18
+    },
+    {
+        "timestamp": "2026-03-16T04:35:59.180Z",
+        "level": "INFO",
+        "service": "payment-reconciliation-job",
+        "trace_id": "d6e7f8a3b4c5",
+        "order_id": "ord_3d1e9f",
+        "message": "reconcile_payment called \u2014 attempt 3",
+        "file": "jobs/paymentReconciliation.py",
+        "line": 18
+    },
+    {
+        "timestamp": "2026-03-16T04:35:59.391Z",
+        "level": "INFO",
+        "service": "payment-reconciliation-job",
+        "trace_id": "d6e7f8a3b4c5",
+        "order_id": "ord_3d1e9f",
+        "message": "reconcile_payment called \u2014 attempt 4",
+        "file": "jobs/paymentReconciliation.py",
+        "line": 18
+    },
+    {
+        "timestamp": "2026-03-16T04:35:59.600Z",
+        "level": "ERROR",
+        "service": "payment-reconciliation-job",
+        "trace_id": "d6e7f8a3b4c5",
+        "order_id": "ord_3d1e9f",
+        "message": "Recursion limit hit \u2014 no base case before recursive call",
+        "file": "jobs/paymentReconciliation.py",
+        "line": 40,
+        "error": "RecursionError: maximum recursion depth exceeded while calling a Python object",
+        "stack_trace": "Traceback (most recent call last):\n  File \"jobs/paymentReconciliation.py\", line 40, in reconcile_payment\n    await reconcile_payment(order_id, attempt + 1)\n  File \"jobs/paymentReconciliation.py\", line 40, in reconcile_payment\n    await reconcile_payment(order_id, attempt + 1)\n  File \"jobs/paymentReconciliation.py\", line 40, in reconcile_payment\n    await reconcile_payment(order_id, attempt + 1)\n  [Previous line repeated 996 more times]\nRecursionError: maximum recursion depth exceeded while calling a Python object",
+        "context": {
+            "final_attempt": 996,
+            "max_retries_defined": 5,
+            "base_case_checked_before_recurse": false
+        }
+    },
+    {
+        "timestamp": "2026-03-16T04:38:22.009Z",
+        "level": "INFO",
+        "service": "order-timeout-job",
+        "trace_id": "e7f8a3b4c5d6",
+        "message": "Order timeout job tick \u2014 checking stale orders",
+        "file": "jobs/orderTimeoutJob.py",
+        "line": 28
+    },
+    {
+        "timestamp": "2026-03-16T04:38:22.014Z",
+        "level": "INFO",
+        "service": "order-timeout-job",
+        "trace_id": "e7f8a3b4c5d6",
+        "message": "cancel_timed_out_orders raised an exception",
+        "file": "jobs/orderTimeoutJob.py",
+        "line": 33
+    },
+    {
+        "timestamp": "2026-03-16T04:38:22.015Z",
+        "level": "WARN",
+        "service": "order-timeout-job",
+        "trace_id": "e7f8a3b4c5d6",
+        "message": "Exception swallowed silently \u2014 bare except: pass in job loop",
+        "file": "jobs/orderTimeoutJob.py",
+        "line": 37,
+        "error": "pymongo.errors.AutoReconnect: connection pool paused \u2014 Atlas connectivity lost",
+        "context": {
+            "exception_logged": false,
+            "exception_alerted": false,
+            "job_continues": true,
+            "stale_orders_accumulating": true,
+            "bare_except_pass": true
+        }
+    }
+]

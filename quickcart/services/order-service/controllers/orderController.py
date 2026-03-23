@@ -25,11 +25,11 @@ async def create_order(request: Request):
     if not user:
         raise HTTPException(status_code=404, detail="User not found")
 
-    # BUG: user["address"] is stored as None for users who haven't set it
-    # accessing user["address"]["pincode"] raises TypeError: 'NoneType' is not subscriptable
-    # No null check is performed before accessing nested address fields
-    delivery_pincode = user["address"]["pincode"]
-    delivery_city = user["address"]["city"]
+    if user.get("address") is None:
+        raise HTTPException(status_code=400, detail="Address not set for user")
+
+    delivery_pincode = user["address"].get("pincode")
+    delivery_city = user["address"].get("city")
 
     items = [OrderItem(**i) for i in items_raw]
     cart_total = sum(i.total_price for i in items)
@@ -37,9 +37,9 @@ async def create_order(request: Request):
     pricing = await calculate_final_price(cart_total, coupon_code)
 
     address = Address(
-        street=user["address"]["street"],
+        street=user["address"].get("street"),
         city=delivery_city,
-        state=user["address"]["state"],
+        state=user["address"].get("state"),
         pincode=delivery_pincode,
     )
 
@@ -57,9 +57,6 @@ async def create_order(request: Request):
 
     logger.info(f"Order created: {result.inserted_id} for user {user_id}")
     return {"order_id": str(result.inserted_id), "amount": pricing["final_amount"]}
-
-
-@router.get("/orders/{order_id}")
 async def get_order(order_id: str):
     orders = get_collection("orders")
     order = await orders.find_one({"_id": ObjectId(order_id)})

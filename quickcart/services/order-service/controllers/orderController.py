@@ -25,13 +25,11 @@ async def create_order(request: Request):
     if not user:
         raise HTTPException(status_code=404, detail="User not found")
 
-    if user["address"] is not None:
-        delivery_pincode = user["address"].get("pincode")
-        delivery_city = user["address"].get("city")
-        street = user["address"].get("street")
-        state = user["address"].get("state")
-    else:
-        raise HTTPException(status_code=400, detail="User address not set")
+    if user["address"] is None:
+        raise HTTPException(status_code=400, detail="Address not set for user")
+
+    delivery_pincode = user["address"].get("pincode")
+    delivery_city = user["address"].get("city")
 
     items = [OrderItem(**i) for i in items_raw]
     cart_total = sum(i.total_price for i in items)
@@ -39,9 +37,9 @@ async def create_order(request: Request):
     pricing = await calculate_final_price(cart_total, coupon_code)
 
     address = Address(
-        street=street,
+        street=user["address"].get("street", ""),
         city=delivery_city,
-        state=state,
+        state=user["address"].get("state", ""),
         pincode=delivery_pincode,
     )
 

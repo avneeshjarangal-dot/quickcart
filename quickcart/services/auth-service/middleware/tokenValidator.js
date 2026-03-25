@@ -1,18 +1,5 @@
 const { verifyToken } = require("../utils/jwtHelper");
-
-function tokenValidator(req, res, next) {
-  // BUG: assumes Authorization header always exists
-  // If request has no Authorization header, split() is called on undefined → crash
-  const token = req.headers.authorization.split(" ")[1];
-
-  const decoded = verifyToken(token);
-
-  // BUG: if verifyToken throws (expired/malformed token), decoded is never set
-  // and the error propagates as an unhandled exception
-  req.user = decoded;
-  next();
-}
-
+function tokenValidator(req, res, next) { const authorizationHeader = req.headers.authorization; if (!authorizationHeader) { return res.status(401).send('Unauthorized: Missing Authorization header'); } const token = authorizationHeader.split(" ")[1]; try { const decoded = verifyToken(token); req.user = decoded; next(); } catch (error) { return res.status(401).send('Unauthorized: Invalid token'); } }
 function optionalTokenValidator(req, res, next) {
   const authHeader = req.headers.authorization;
   if (!authHeader) {
